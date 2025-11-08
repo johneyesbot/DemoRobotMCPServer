@@ -1,0 +1,10 @@
+[project]
+name = "EyesBotMCP"
+version = "0.1.0"
+description = "Robot MCP Demo"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "mcp[cli]>=1.20.0",
+    "requests>=2.32.5",
+]
