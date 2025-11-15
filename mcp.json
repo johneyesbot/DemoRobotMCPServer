@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "EyesBot": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "--with",
+        "responses",
+        "mcp",
+        "run",
+        "/Users/[your user here!!]/Documents/Code/AI/RobotMCP/MCPServer/main.py"
+      ],
+      "env": {
+        "ROBOT_BASE_URL": "192.168.8.227:8080",
+        "SECURE_URL": "False"
+      }
+    }
+  }
+}

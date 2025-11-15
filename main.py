@@ -1,20 +1,21 @@
-# Written by John Keogh
 #
 # Licensed under the MIT license. 
 #
 # This is free software: you can redistribute it and/or modify
 # it under the terms of the MIT license.
 #
-# The EyesBotMCP project is distributed in the hope that it will be useful,
+# This code is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 # 
+# Written by John Keogh, 2025
+#
 import os
 import requests
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
-    name="EyesBot",
+    name="EyesBot MCP Server",
     instructions="When you are asked for the name of the robot or a description of its surroundings"
 )
 
@@ -70,13 +71,13 @@ def get_url_body(url, as_binary=False):
         else:
             return response.text
     except requests.exceptions.HTTPError as e:
-        print(f"HTTP Error: {e}")
+        print(f"HTTPError: {e}")
     except requests.exceptions.ConnectionError as e:
-        print(f"Connection Error: {e}")
+        print(f"ConnectionError: {e}")
     except requests.exceptions.Timeout as e:
-        print(f"Timeout Error: {e}")
+        print(f"Timeout: {e}")
     except requests.exceptions.RequestException as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"RequestException: {e}")
     return ""
 
 
