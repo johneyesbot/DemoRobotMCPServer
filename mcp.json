@@ -13,7 +13,7 @@
         "/Users/[your user here!!]/Documents/Code/AI/RobotMCP/MCPServer/main.py"
       ],
       "env": {
-        "ROBOT_BASE_URL": "192.168.8.227:8080",
+        "ROBOT_BASE_URL": "[your robot's IP address here!!]:[your robot's port server port number here!!]",
         "SECURE_URL": "False"
       }
     }
