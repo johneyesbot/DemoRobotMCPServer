@@ -37,7 +37,7 @@ def robot_name() -> str:
 @mcp.resource("robot://camera/images/latest/", description="The most recent image captured by the robot's left or right camera.  Left is 0 and right is 1", mime_type="image/png")
 def lastest_image() -> bytes:
     """Get most recent image captured by robot"""
-    resource_url = get_url(f"image?camera=0")
+    resource_url = get_url("image?camera=0")
     image_bytes = get_url_body(resource_url, True)
     return image_bytes
 
@@ -45,7 +45,7 @@ def lastest_image() -> bytes:
 @mcp.prompt()
 def get_robot_info() -> str:
     """Get information about robot"""
-    return f"Could you get the robot's name and describe their surroundings"
+    return "Could you get the robot's name and describe their surroundings"
 
 
 def get_url(path):
